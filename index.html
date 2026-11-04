@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixel War: a pixel-art action game</title>
+<meta name="description" content="Pixel War: a side-view pixel-art action game for Android. Five worlds, fifteen stages, five bosses, eight weapons and hand-animated pixel effects. By Ayesh Ul Hassan (sudo-ayesh).">
+<meta name="theme-color" content="#0b0a12">
+<meta property="og:title" content="Pixel War">
+<meta property="og:description" content="Five worlds, five bosses, eight weapons. A pixel-art action game for Android.">
+<meta property="og:image" content="img/world_crypt.png">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="#top" aria-label="Pixel War home"><span class="px" data-text="PIXEL WAR" data-scale="2" data-color="#ffe26b">PIXEL WAR</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="#worlds">Worlds</a>
+    <a href="#arsenal">Arsenal</a>
+    <a href="#spells">Spells</a>
+    <a href="#shots">Screens</a>
+    <a href="#credits">Credits</a>
+  </div>
+  <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  <button class="sound" id="sound" aria-pressed="false" title="Play the menu music"><img src="assets/ui/ic_heal.png" alt="" id="sound-ic"> <span>Music off</span></button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" style="background-image:url(img/world_crypt.png)"></div>
+  <div class="fireflies" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1 class="px" data-text="PIXEL WAR" data-scale="9" data-color="#ffe26b">PIXEL WAR</h1>
+      <p class="tag">A pixel-art action campaign for Android</p>
+      <p class="lede">Cut through five cursed worlds as an armoured knight. Pick from eight weapons, call down lightning and meteors, freeze whole waves, and break five bosses, every spark of it hand-animated pixel effects.</p>
+      <div class="cta">
+        <a class="btn btn-primary btn-big" href="downloads/PixelWar.apk" download>Download for Android</a>
+        <a class="btn" href="#worlds">Explore the worlds</a>
+      </div>
+      <p class="fine">Free &middot; Android 7.0+ &middot; 55 MB &middot; touch, keyboard and gamepad</p>
+    </div>
+    <div class="hero-stage" aria-hidden="true">
+      <canvas class="fx" data-fx="arcane/portal" data-scale="3"></canvas>
+      <canvas class="hero-knight" id="hero-knight" data-scale="4"></canvas>
+      <div class="hero-weapon"><span id="hero-weapon-name">SWORD</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="stat"><b class="px" data-text="5" data-scale="6" data-color="#ffe26b">5</b><span>Worlds</span></div>
+  <div class="stat"><b class="px" data-text="15" data-scale="6" data-color="#ffe26b">15</b><span>Stages</span></div>
+  <div class="stat"><b class="px" data-text="5" data-scale="6" data-color="#ffe26b">5</b><span>Bosses</span></div>
+  <div class="stat"><b class="px" data-text="8" data-scale="6" data-color="#ffe26b">8</b><span>Weapons</span></div>
+  <div class="stat"><b class="px" data-text="6" data-scale="6" data-color="#ffe26b">6</b><span>Skills</span></div>
+  <div class="stat"><b class="px" data-text="244" data-scale="6" data-color="#ffe26b">244</b><span>Pixel effects</span></div>
+</section>
+
+<section class="section" id="features">
+  <h2 class="px" data-text="FEATURES" data-scale="5" data-color="#ffe26b">FEATURES</h2>
+  <div class="grid features">
+    <article class="card"><img class="icon" src="assets/ui/ic_meteor.png" alt=""><h3>Hand-animated effects</h3><p>Every flame, bolt, splash and shatter is a frame-by-frame pixel effect from the pixelfx library, not a particle blur.</p></article>
+    <article class="card"><img class="icon" src="assets/ui/ic_hammer.png" alt=""><h3>Eight weapons</h3><p>Sword, daggers, claws, spear, whip, hammer, greatsword and scythe, each with its own swing, reach and hit timing.</p></article>
+    <article class="card"><img class="icon" src="assets/ui/skull.png" alt=""><h3>Boss fights</h3><p>Five bosses with readable telegraphs: a ring on the floor fills up, then the strike lands. Watch out at half health, when they get angry.</p></article>
+    <article class="card"><img class="icon" src="assets/ui/ic_lightning.png" alt=""><h3>Six skills</h3><p>Fireball, lightning, frost nova, meteor and heal unlock as you clear stages. Fire melts ice; frozen enemies shatter.</p></article>
+    <article class="card"><img class="icon" src="assets/ui/star.png" alt=""><h3>Stars and upgrades</h3><p>Three stars per stage for clearing, staying healthy and beating par time. Spend coins on skills, health and new weapons.</p></article>
+    <article class="card"><img class="icon" src="assets/ui/ic_nova.png" alt=""><h3>Made for phones</h3><p>Multi-touch controls, any screen shape from 4:3 tablets to 21:9 phones, notch-safe HUD and adjustable button size.</p></article>
+  </div>
+</section>
+
+<section class="section" id="worlds">
+  <h2 class="px" data-text="FIVE WORLDS" data-scale="5" data-color="#ffe26b">FIVE WORLDS</h2>
+  <p class="intro">Three stages each, the third ends in a boss. Every world brings its own enemies and hazards.</p>
+  <div class="worlds">
+    <article class="world" style="--accent:#f2a23a">
+      <img src="img/world_crypt.png" alt="The Ashen Crypt: torch-lit stone hall" loading="lazy">
+      <div class="world-body">
+        <span class="world-n">World 1</span>
+        <h3>Ashen Crypt</h3>
+        <p>Torch-lit halls full of slimes, bats and ghosts. A gentle start, then the King Slime leaps for you.</p>
+        <div class="world-cast"><canvas class="fx" data-fx="critters/slime" data-scale="1"></canvas><canvas class="fx" data-fx="critters/bat" data-scale="1"></canvas><canvas class="fx" data-fx="critters/ghost" data-scale="1"></canvas></div>
+        <p class="boss"><img src="assets/ui/skull.png" alt=""> Boss: King Slime</p>
+      </div>
+    </article>
+    <article class="world" style="--accent:#8fd6ff">
+      <img src="img/world_frost.png" alt="Frostbite Cavern: an ice cave in falling snow" loading="lazy">
+      <div class="world-body">
+        <span class="world-n">World 2</span>
+        <h3>Frostbite Cavern</h3>
+        <p>Icicles drip, tremble and drop. Frost slimes and ghosts guard the cave of the Frost Wraith.</p>
+        <div class="world-cast"><canvas class="fx" data-fx="critters/slime@frost" data-scale="1"></canvas><canvas class="fx" data-fx="critters/ghost@frost" data-scale="1"></canvas></div>
+        <p class="boss"><img src="assets/ui/skull.png" alt=""> Boss: Frost Wraith</p>
+      </div>
+    </article>
+    <article class="world" style="--accent:#8cf08c">
+      <img src="img/world_forest.png" alt="Thornwood: a dusk forest with a waterfall" loading="lazy">
+      <div class="world-body">
+        <span class="world-n">World 3</span>
+        <h3>Thornwood</h3>
+        <p>Poison clouds hang over the forest floor. Frogs, snakes and birds, and the Elder Toad in the old pond.</p>
+        <div class="world-cast"><canvas class="fx" data-fx="critters/frog" data-scale="1"></canvas><canvas class="fx" data-fx="critters/snake" data-scale="1"></canvas><canvas class="fx" data-fx="critters/bird" data-scale="1"></canvas></div>
+        <p class="boss"><img src="assets/ui/skull.png" alt=""> Boss: Elder Toad</p>
+      </div>
+    </article>
+    <article class="world" style="--accent:#ff7b22">
+      <img src="img/world_forge.png" alt="Ember Forge: a furnace hall over a lava channel" loading="lazy">
+      <div class="world-body">
+        <span class="world-n">World 4</span>
+        <h3>Ember Forge</h3>
+        <p>Flame vents erupt from the grating. Magma slimes burst, wisps dive, and the Inferno Skull rains fire.</p>
+        <div class="world-cast"><canvas class="fx" data-fx="critters/slime@magma" data-scale="1"></canvas><canvas class="fx" data-fx="critters/wisp@ember" data-scale="1"></canvas><canvas class="fx" data-fx="critters/flying-skull" data-scale="1"></canvas></div>
+        <p class="boss"><img src="assets/ui/skull.png" alt=""> Boss: Inferno Skull</p>
+      </div>
+    </article>
+    <article class="world" style="--accent:#c684ff">
+      <img src="img/world_void.png" alt="Void Rift: floating rocks under shooting stars" loading="lazy">
+      <div class="world-body">
+        <span class="world-n">World 5</span>
+        <h3>Void Rift</h3>
+        <p>Shadow hands reach up through the floor while lightning storms roll. At the end waits the Eye of the Void.</p>
+        <div class="world-cast"><canvas class="fx" data-fx="critters/ghost@void" data-scale="1"></canvas><canvas class="fx" data-fx="critters/jellyfish@void" data-scale="1"></canvas><canvas class="fx" data-fx="critters/eyeball" data-scale="1"></canvas></div>
+        <p class="boss"><img src="assets/ui/skull.png" alt=""> Boss: Eye of the Void</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="arsenal">
+  <h2 class="px" data-text="THE ARSENAL" data-scale="5" data-color="#ffe26b">THE ARSENAL</h2>
+  <p class="intro">Buy weapons in the shop's Armory and equip one. Your attack button becomes that weapon.</p>
+  <div class="grid weapons" id="weapons"></div>
+</section>
+
+<section class="section" id="spells">
+  <h2 class="px" data-text="SKILLS" data-scale="5" data-color="#ffe26b">SKILLS</h2>
+  <p class="intro">Unlocked by clearing stages, upgraded with coins: +30% damage and &minus;15% cooldown per level.</p>
+  <div class="grid spells">
+    <article class="card spell"><canvas class="fx" data-fx="fire/fireball" data-scale="2"></canvas><h3><img src="assets/ui/ic_fireball.png" alt=""> Fireball</h3><p>Flies straight and sets enemies burning. Melts frozen ones.</p></article>
+    <article class="card spell"><canvas class="fx" data-fx="lightning/lightning-strike" data-scale="1"></canvas><h3><img src="assets/ui/ic_lightning.png" alt=""> Lightning</h3><p>A sigil marks the nearest enemy, then a bolt stuns everything near it.</p></article>
+    <article class="card spell"><canvas class="fx" data-fx="ice/frost-nova" data-scale="1"></canvas><h3><img src="assets/ui/ic_nova.png" alt=""> Frost Nova</h3><p>The knight slams the ground; everything close freezes solid.</p></article>
+    <article class="card spell"><canvas class="fx" data-fx="fire/meteor" data-scale="1"></canvas><h3><img src="assets/ui/ic_meteor.png" alt=""> Meteor</h3><p>A burning rock comes down on a whole group.</p></article>
+    <article class="card spell"><canvas class="fx" data-fx="holy/heal-aoe" data-scale="1"></canvas><h3><img src="assets/ui/ic_heal.png" alt=""> Heal</h3><p>A ring of light restores your health over a few seconds.</p></article>
+  </div>
+</section>
+
+<section class="section" id="shots">
+  <h2 class="px" data-text="SCREENSHOTS" data-scale="5" data-color="#ffe26b">SCREENSHOTS</h2>
+  <div class="shots">
+    <button class="shot" data-full="img/shot_boss_void.png"><img src="img/shot_boss_void.png" alt="Fighting the Eye of the Void with a greatsword" loading="lazy"></button>
+    <button class="shot" data-full="img/shot_boss_toad.png"><img src="img/shot_boss_toad.png" alt="The Elder Toad boss in Thornwood" loading="lazy"></button>
+    <button class="shot" data-full="img/shot_frost.png"><img src="img/shot_frost.png" alt="Dagger flurry in the Frostbite Cavern" loading="lazy"></button>
+    <button class="shot" data-full="img/shot_fight.png"><img src="img/shot_fight.png" alt="Touch controls during a fight" loading="lazy"></button>
+    <button class="shot" data-full="img/shot_armory.png"><img src="img/shot_armory.png" alt="The Armory, choosing a weapon" loading="lazy"></button>
+    <button class="shot" data-full="img/shot_map.png"><img src="img/shot_map.png" alt="The world map" loading="lazy"></button>
+  </div>
+</section>
+
+<section class="section" id="download">
+  <div class="panel download">
+    <canvas class="fx" data-fx="pickups/coin-spin" data-scale="3"></canvas>
+    <div>
+      <h2 class="px" data-text="GET PIXEL WAR" data-scale="4" data-color="#ffe26b">GET PIXEL WAR</h2>
+      <p>Free for Android 7.0 and newer (64-bit). Install the APK, allow installs from this source when Android asks, and play.</p>
+      <div class="cta">
+        <a class="btn btn-primary btn-big" href="downloads/PixelWar.apk" download>Download APK &middot; 55 MB</a>
+        <a class="btn" href="https://sudo-ayesh.itch.io/" target="_blank" rel="noopener">More on itch.io</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="credits">
+  <div class="panel credits">
+    <h2 class="px" data-text="CREDITS" data-scale="4" data-color="#ffe26b">CREDITS</h2>
+    <p class="by">Designed and developed by</p>
+    <p class="name">Ayesh Ul Hassan</p>
+    <p class="handle">sudo-ayesh &middot; Game Developer / Unreal Engine 5 / Roblox</p>
+    <div class="cta center">
+      <a class="btn btn-primary" href="https://syedayeshulhassanbukhari.github.io/sudo-ayesh/#hero" target="_blank" rel="noopener">Visit my portfolio</a>
+      <a class="btn" href="https://sudo-ayesh.itch.io/" target="_blank" rel="noopener">itch.io</a>
+      <a class="btn" href="https://github.com/syedayeshulhassanbukhari" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/syedaishulhassan" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://www.fiverr.com/syedaish" target="_blank" rel="noopener">Fiverr</a>
+    </div>
+    <p class="small">Pixel effects and character rig: <a href="https://github.com/patch-gg/pixelfx" target="_blank" rel="noopener">pixelfx</a>. Engine: <a href="https://godotengine.org" target="_blank" rel="noopener">Godot 4.7</a>. Music and sound: original chiptune.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <span class="px" data-text="PIXEL WAR" data-scale="2" data-color="#8f8693">PIXEL WAR</span>
+  <span>&copy; 2026 Ayesh Ul Hassan</span>
+</footer>
+
+<a class="dock btn btn-primary" href="downloads/PixelWar.apk" download>Download for Android &middot; Free</a>
+
+<div class="lightbox" id="lightbox" hidden><img alt=""><button class="btn" id="lb-close">Close</button></div>
+
+<script src="main.js"></script>
+</body>
+</html>
