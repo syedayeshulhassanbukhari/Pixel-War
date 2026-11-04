@@ -4,17 +4,18 @@
 
 # PIXEL WAR
 
-**A pixel-art action campaign for Android**
+**A pixel-art action campaign for Android and Windows**
 
 Five cursed worlds &middot; fifteen stages &middot; five bosses &middot; eight weapons &middot; hand-animated pixel effects
 
 [**Website**](https://syedayeshulhassanbukhari.github.io/Pixel-War/) &nbsp;&middot;&nbsp;
-[**Download the APK**](downloads/PixelWar.apk) &nbsp;&middot;&nbsp;
+[**Download for Android**](downloads/PixelWar.apk) &nbsp;&middot;&nbsp;
+[**Download for Windows**](https://github.com/syedayeshulhassanbukhari/Pixel-War/releases/latest/download/PixelWar_Windows.exe) &nbsp;&middot;&nbsp;
 [**Developer portfolio**](https://syedayeshulhassanbukhari.github.io/sudo-ayesh/#hero)
 
-![Platform](https://img.shields.io/badge/platform-Android%207.0%2B-ffc23d?style=flat-square&labelColor=0b0a12)
+![Platform](https://img.shields.io/badge/platform-Android%20%7C%20Windows-ffc23d?style=flat-square&labelColor=0b0a12)
 ![Engine](https://img.shields.io/badge/engine-Godot%204.7-8fd6ff?style=flat-square&labelColor=0b0a12)
-![Size](https://img.shields.io/badge/APK-55%20MB-c684ff?style=flat-square&labelColor=0b0a12)
+![Release](https://img.shields.io/github/v/release/syedayeshulhassanbukhari/Pixel-War?style=flat-square&labelColor=0b0a12&color=c684ff)
 ![Price](https://img.shields.io/badge/price-free-8cf08c?style=flat-square&labelColor=0b0a12)
 
 <img src="img/shot_boss_void.png" width="820" alt="Fighting the Eye of the Void with a greatsword">
@@ -82,9 +83,15 @@ Cut through five worlds as an armoured knight. Pick from eight weapons, call dow
 
 ## Install
 
-1. Download [**PixelWar.apk**](downloads/PixelWar.apk) on your Android phone (Android 7.0 or newer, 64-bit).
+**Android** (7.0 or newer, 64-bit, 55 MB)
+1. Download [**PixelWar.apk**](downloads/PixelWar.apk) on your phone.
 2. Open it. If Android asks, allow installs from your browser or file manager.
-3. Play. Progress saves automatically.
+
+**Windows** (10/11, 64-bit, 201 MB)
+1. Download [**PixelWar_Windows.exe**](https://github.com/syedayeshulhassanbukhari/Pixel-War/releases/latest/download/PixelWar_Windows.exe) from the [latest release](https://github.com/syedayeshulhassanbukhari/Pixel-War/releases/latest).
+2. Run it. It's a single file with nothing to install. If SmartScreen warns, choose *More info &rarr; Run anyway*.
+
+Progress saves automatically on both.
 
 **Controls:** on-screen arrows and skill buttons on phones. On a keyboard, `A`/`D` to move, `J K L U I O` for skills and `Esc` to pause. Gamepads work too.
 
@@ -104,4 +111,4 @@ To run it locally: `python -m http.server` in this folder, then open http://loca
 
 [Portfolio](https://syedayeshulhassanbukhari.github.io/sudo-ayesh/#hero) &middot; [itch.io](https://sudo-ayesh.itch.io/) &middot; [GitHub](https://github.com/syedayeshulhassanbukhari) &middot; [LinkedIn](https://www.linkedin.com/in/syedaishulhassan) &middot; [Fiverr](https://www.fiverr.com/syedaish)
 
-Pixel effects and character rig: [pixelfx](https://github.com/patch-gg/pixelfx) &middot; Engine: [Godot 4.7](https://godotengine.org) &middot; Music and sound: original chiptune
+Engine: [Godot 4.7](https://godotengine.org) &middot; Music and sound: original chiptune
