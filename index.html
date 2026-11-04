@@ -47,6 +47,7 @@
   "playMode": "SinglePlayer",
   "author": { "@type": "Person", "name": "Ayesh Ul Hassan", "url": "https://syedayeshulhassanbukhari.github.io/sudo-ayesh/" },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "trailer": { "@type": "VideoObject", "name": "Pixel War trailer", "description": "Five worlds, eight weapons and the boss fights of Pixel War.", "thumbnailUrl": "https://syedayeshulhassanbukhari.github.io/Pixel-War/video/trailer-poster.webp", "contentUrl": "https://syedayeshulhassanbukhari.github.io/Pixel-War/video/trailer.mp4", "uploadDate": "2026-11-04", "duration": "PT51S" },
   "screenshot": ["https://syedayeshulhassanbukhari.github.io/Pixel-War/img/shot_boss_void.webp", "https://syedayeshulhassanbukhari.github.io/Pixel-War/img/shot_boss_toad.webp", "https://syedayeshulhassanbukhari.github.io/Pixel-War/img/shot_fight.webp"]
 }
 </script>
@@ -63,6 +64,7 @@
 <nav class="nav">
   <a class="nav-logo" href="#top" aria-label="Pixel War home"><span class="px" data-text="PIXEL WAR" data-scale="2" data-color="#ffe26b">PIXEL WAR</span></a>
   <div class="nav-links" id="nav-links">
+    <a href="#trailer">Trailer</a>
     <a href="#worlds">Worlds</a>
     <a href="#arsenal">Arsenal</a>
     <a href="#spells">Spells</a>
@@ -103,6 +105,14 @@
   <div class="stat"><b class="px" data-text="8" data-scale="6" data-color="#ffe26b">8</b><span>Weapons</span></div>
   <div class="stat"><b class="px" data-text="6" data-scale="6" data-color="#ffe26b">6</b><span>Skills</span></div>
   <div class="stat"><b class="px" data-text="244" data-scale="6" data-color="#ffe26b">244</b><span>Pixel effects</span></div>
+</section>
+
+<section class="section" id="trailer">
+  <h2 class="px" data-text="TRAILER" data-scale="5" data-color="#ffe26b">TRAILER</h2>
+  <!-- preload="none": the 9 MB video downloads only when someone presses play -->
+  <video class="trailer" controls preload="none" playsinline poster="video/trailer-poster.webp" width="1280" height="720">
+    <source src="video/trailer.mp4" type="video/mp4">
+  </video>
 </section>
 
 <section class="section" id="features">
