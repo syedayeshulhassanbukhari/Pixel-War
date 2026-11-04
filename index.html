@@ -47,7 +47,7 @@
   "playMode": "SinglePlayer",
   "author": { "@type": "Person", "name": "Ayesh Ul Hassan", "url": "https://syedayeshulhassanbukhari.github.io/sudo-ayesh/" },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "screenshot": ["https://syedayeshulhassanbukhari.github.io/Pixel-War/img/shot_boss_void.png", "https://syedayeshulhassanbukhari.github.io/Pixel-War/img/shot_boss_toad.png", "https://syedayeshulhassanbukhari.github.io/Pixel-War/img/shot_fight.png"]
+  "screenshot": ["https://syedayeshulhassanbukhari.github.io/Pixel-War/img/shot_boss_void.webp", "https://syedayeshulhassanbukhari.github.io/Pixel-War/img/shot_boss_toad.webp", "https://syedayeshulhassanbukhari.github.io/Pixel-War/img/shot_fight.webp"]
 }
 </script>
 <link rel="apple-touch-icon" href="assets/icon.png">
@@ -55,6 +55,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/world_crypt.webp" fetchpriority="high">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -73,7 +74,7 @@
 </nav>
 
 <header class="hero" id="top">
-  <div class="hero-bg" style="background-image:url(img/world_crypt.png)"></div>
+  <div class="hero-bg" style="background-image:url(img/world_crypt.webp)"></div>
   <div class="fireflies" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-copy">
@@ -121,7 +122,7 @@
   <p class="intro">Three stages each, the third ends in a boss. Every world brings its own enemies and hazards.</p>
   <div class="worlds">
     <article class="world" style="--accent:#f2a23a">
-      <img src="img/world_crypt.png" alt="The Ashen Crypt: torch-lit stone hall" loading="lazy">
+      <img src="img/world_crypt.webp" alt="The Ashen Crypt: torch-lit stone hall" loading="lazy">
       <div class="world-body">
         <span class="world-n">World 1</span>
         <h3>Ashen Crypt</h3>
@@ -131,7 +132,7 @@
       </div>
     </article>
     <article class="world" style="--accent:#8fd6ff">
-      <img src="img/world_frost.png" alt="Frostbite Cavern: an ice cave in falling snow" loading="lazy">
+      <img src="img/world_frost.webp" alt="Frostbite Cavern: an ice cave in falling snow" loading="lazy">
       <div class="world-body">
         <span class="world-n">World 2</span>
         <h3>Frostbite Cavern</h3>
@@ -141,7 +142,7 @@
       </div>
     </article>
     <article class="world" style="--accent:#8cf08c">
-      <img src="img/world_forest.png" alt="Thornwood: a dusk forest with a waterfall" loading="lazy">
+      <img src="img/world_forest.webp" alt="Thornwood: a dusk forest with a waterfall" loading="lazy">
       <div class="world-body">
         <span class="world-n">World 3</span>
         <h3>Thornwood</h3>
@@ -151,7 +152,7 @@
       </div>
     </article>
     <article class="world" style="--accent:#ff7b22">
-      <img src="img/world_forge.png" alt="Ember Forge: a furnace hall over a lava channel" loading="lazy">
+      <img src="img/world_forge.webp" alt="Ember Forge: a furnace hall over a lava channel" loading="lazy">
       <div class="world-body">
         <span class="world-n">World 4</span>
         <h3>Ember Forge</h3>
@@ -161,7 +162,7 @@
       </div>
     </article>
     <article class="world" style="--accent:#c684ff">
-      <img src="img/world_void.png" alt="Void Rift: floating rocks under shooting stars" loading="lazy">
+      <img src="img/world_void.webp" alt="Void Rift: floating rocks under shooting stars" loading="lazy">
       <div class="world-body">
         <span class="world-n">World 5</span>
         <h3>Void Rift</h3>
@@ -194,12 +195,12 @@
 <section class="section" id="shots">
   <h2 class="px" data-text="SCREENSHOTS" data-scale="5" data-color="#ffe26b">SCREENSHOTS</h2>
   <div class="shots">
-    <button class="shot" data-full="img/shot_boss_void.png"><img src="img/shot_boss_void.png" alt="Fighting the Eye of the Void with a greatsword" loading="lazy"></button>
-    <button class="shot" data-full="img/shot_boss_toad.png"><img src="img/shot_boss_toad.png" alt="The Elder Toad boss in Thornwood" loading="lazy"></button>
-    <button class="shot" data-full="img/shot_frost.png"><img src="img/shot_frost.png" alt="Dagger flurry in the Frostbite Cavern" loading="lazy"></button>
-    <button class="shot" data-full="img/shot_fight.png"><img src="img/shot_fight.png" alt="Touch controls during a fight" loading="lazy"></button>
-    <button class="shot" data-full="img/shot_armory.png"><img src="img/shot_armory.png" alt="The Armory, choosing a weapon" loading="lazy"></button>
-    <button class="shot" data-full="img/shot_map.png"><img src="img/shot_map.png" alt="The world map" loading="lazy"></button>
+    <button class="shot" data-full="img/shot_boss_void.webp"><img src="img/shot_boss_void.webp" alt="Fighting the Eye of the Void with a greatsword" loading="lazy"></button>
+    <button class="shot" data-full="img/shot_boss_toad.webp"><img src="img/shot_boss_toad.webp" alt="The Elder Toad boss in Thornwood" loading="lazy"></button>
+    <button class="shot" data-full="img/shot_frost.webp"><img src="img/shot_frost.webp" alt="Dagger flurry in the Frostbite Cavern" loading="lazy"></button>
+    <button class="shot" data-full="img/shot_fight.webp"><img src="img/shot_fight.webp" alt="Touch controls during a fight" loading="lazy"></button>
+    <button class="shot" data-full="img/shot_armory.webp"><img src="img/shot_armory.webp" alt="The Armory, choosing a weapon" loading="lazy"></button>
+    <button class="shot" data-full="img/shot_map.webp"><img src="img/shot_map.webp" alt="The world map" loading="lazy"></button>
   </div>
 </section>
 
@@ -244,6 +245,6 @@
 
 <div class="lightbox" id="lightbox" hidden><img alt=""><button class="btn" id="lb-close">Close</button></div>
 
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 </body>
 </html>

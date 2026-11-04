@@ -122,6 +122,13 @@ async function heroPlayer(canvas, scale, seq, onLoop) {
 // only animate what's on screen
 const visible = new WeakSet();
 const io = new IntersectionObserver((es) => es.forEach((en) => (en.isIntersecting ? visible.add(en.target) : visible.delete(en.target))), { rootMargin: "100px" });
+// run fn once, the first time el comes within a screen of the viewport (that's when its sheets download)
+const near = new IntersectionObserver((es) => es.forEach((en) => {
+  if (!en.isIntersecting) return;
+  near.unobserve(en.target);
+  en.target._start();
+}), { rootMargin: "600px 0px" });
+const whenNear = (el, fn) => { el._start = fn; near.observe(el); };
 let last = performance.now();
 function frame(now) {
   const dt = Math.min(0.1, (now - last) / 1000);
@@ -157,7 +164,7 @@ function buildWeapons() {
     grid.appendChild(card);
     const cv = card.querySelector("canvas");
     io.observe(cv);
-    heroPlayer(cv, phone ? 1 : 2, [`${id}/attack`, `${id}/idle`]);
+    whenNear(cv, () => heroPlayer(cv, phone ? 1 : 2, [`${id}/attack`, `${id}/idle`]));
   }
 }
 
@@ -196,16 +203,18 @@ function fireflies() {
 
 function sound() {
   const btn = document.getElementById("sound");
-  const music = new Audio("assets/audio/menu.wav");
-  music.loop = true;
-  music.volume = 0.45;
-  const click = new Audio("assets/audio/ui_click.wav");
-  click.volume = 0.4;
-  let on = false;
+  let music = null, click = null, on = false;
   btn.addEventListener("click", () => {
     on = !on;
     btn.setAttribute("aria-pressed", on);
     btn.querySelector("span").textContent = on ? "Music on" : "Music off";
+    if (on && !music) {
+      music = new Audio("assets/audio/menu.mp3");
+      music.loop = true;
+      music.volume = 0.45;
+      click = new Audio("assets/audio/ui_click.wav");
+      click.volume = 0.4;
+    }
     if (on) music.play().catch(() => {}); else music.pause();
   });
   document.querySelectorAll(".btn").forEach((b) => b.addEventListener("click", () => { if (on) { click.currentTime = 0; click.play().catch(() => {}); } }));
@@ -245,7 +254,7 @@ const phone = matchMedia("(max-width: 640px)").matches;
   lightbox();
   pixelText().catch(() => document.querySelectorAll(".px").forEach((el) => el.classList.add("fallback")));
   [fxIndex, heroIndex] = await Promise.all([loadJSON("assets/fx/index.json"), loadJSON("assets/hero/hero.json")]);
-  document.querySelectorAll("canvas.fx[data-fx]").forEach((cv) => { io.observe(cv); fxPlayer(cv, cv.dataset.fx, Math.max(1, (+cv.dataset.scale || 2) - (phone && cv.closest('.hero-stage') ? 1 : 0))); });
+  document.querySelectorAll("canvas.fx[data-fx]").forEach((cv) => { io.observe(cv); whenNear(cv, () => fxPlayer(cv, cv.dataset.fx, Math.max(1, (+cv.dataset.scale || 2) - (phone && cv.closest('.hero-stage') ? 1 : 0)))); });
   buildWeapons();
   heroKnight();
   requestAnimationFrame(frame);
