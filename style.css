@@ -310,3 +310,9 @@ html, body { overflow-x: hidden; }
   .features, .spells { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* remix gallery */
+.remix { margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.remix img { width: 100%; height: auto; image-rendering: pixelated; border-radius: 4px; }
+.remix figcaption { font-size: 14px; line-height: 1.4; }
+.remix figcaption b { display: block; color: #ffe26b; }

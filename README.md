@@ -6,10 +6,10 @@
 
 **A pixel-art action campaign for Android and Windows**
 
-Five cursed worlds &middot; fifteen stages &middot; five bosses &middot; eight weapons &middot; hand-animated pixel effects
+Seven worlds and five remixes &middot; 36 stages &middot; ten bosses &middot; three heroes &middot; eight weapons &middot; eleven spells &middot; Endless mode
 
 [**Website**](https://syedayeshulhassanbukhari.github.io/Pixel-War/) &nbsp;&middot;&nbsp;
-[**Download for Android**](downloads/PixelWar.apk) &nbsp;&middot;&nbsp;
+[**Download for Android**](https://github.com/syedayeshulhassanbukhari/Pixel-War/releases/latest) &nbsp;&middot;&nbsp;
 [**Download for Windows**](https://github.com/syedayeshulhassanbukhari/Pixel-War/releases/latest/download/PixelWar_Windows.exe) &nbsp;&middot;&nbsp;
 [**Developer portfolio**](https://syedayeshulhassanbukhari.github.io/sudo-ayesh/#hero)
 
@@ -84,7 +84,7 @@ Cut through five worlds as an armoured knight. Pick from eight weapons, call dow
 ## Install
 
 **Android** (7.0 or newer, 64-bit, 55 MB)
-1. Download [**PixelWar.apk**](downloads/PixelWar.apk) on your phone.
+1. Download [**PixelWar.apk**](https://github.com/syedayeshulhassanbukhari/Pixel-War/releases/latest) on your phone.
 2. Open it. If Android asks, allow installs from your browser or file manager.
 
 **Windows** (10/11, 64-bit, 201 MB)

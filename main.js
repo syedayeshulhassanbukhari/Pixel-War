@@ -147,6 +147,8 @@ const WEAPONS = [
   ["hammer", "Hammer", "Slow. Crushes and stuns everything near.", 48, 76, 260, "#f2a23a"],
   ["greatsword", "Greatsword", "A huge cleave. Slow, wide, heavy.", 40, 86, 320, "#b8c9e8"],
   ["scythe", "Scythe", "Reaps both sides and heals you a little.", 30, 96, 400, "#8cf08c"],
+  ["bow", "Ranger", "A new hero: arrows fly across the arena. Moves faster.", 16, 280, 220, "#9ccc6a"],
+  ["staff", "Arcane Mage", "A new hero: arcane bolts at range, skills hit harder.", 15, 175, 260, "#c48ae8"],
 ];
 function buildWeapons() {
   const grid = document.getElementById("weapons");
